@@ -1,0 +1,18 @@
+# Eureka Server Configuration
+server.port=8761
+spring.application.name=eureka-service-discovery
+
+# Disable self-registration (Eureka Server should not register itself)
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+
+# Eureka Dashboard
+eureka.server.enable-self-preservation=false
+
+#controls how long the Eureka Server waits before it becomes "active" and starts serving traffic
+eureka.server.wait-time-in-ms-when-sync-empty=0
+
+# monitoring configuration
+spring.boot.admin.client.url=http://localhost:5000
+management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always
